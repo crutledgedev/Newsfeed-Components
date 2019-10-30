@@ -98,17 +98,55 @@ const data = [
 
     <span class='expandButton'></span>
   </div>
+ */
+// const createNews = document.querySelector('.news');
 
-  Hint: You will need to use createElement more than once here!
+// data.forEach(data => {
+//   .appendChild(news(data.title, data.date, data.firstParagraph, data.secondParagraph,data.thirdParagraph))
+// });
 
-  Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
 
-  Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
+ //create elements
+ const article = document.createElement('div'); 
+ const articleTitle = document.createElement('h2');
+ const articleDate = document.createElement('p');
+ const content1 = document.createElement('p');
+ const content2 = document.createElement('p');
+ const content3 = document.createElement('p');
+ const expBtn = document.createElement('span');
 
-  Step 3: return the entire component.
+//structure
+article.append(articleTitle);
+article.append(articleDate);
+article.append(content1);
+article.append(content2);
+article.append(content3);
+article.append(expBtn);
+// console.log(article);
 
-  Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
+//set class names
+article.classList.add('article');
+articleDate.classList.add('date');
+expBtn.classList.add('expandButton');
+console.log(article);
 
-  Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
+// articleTitle.textContent = title;
 
-*/
+
+// console.log(article);
+
+
+
+//   Hint: You will need to use createElement more than once here!
+
+//   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
+
+//   Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
+
+//   Step 3: return the entire component.
+
+//   Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
+
+//   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
+
+// */
