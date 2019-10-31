@@ -119,7 +119,8 @@ function createdArticle(title, date, firstParagraph, secondParagraph, thirdParag
  const content1 = document.createElement('p');
  const content2 = document.createElement('p');
  const content3 = document.createElement('p');
- const expBtn = document.createElement('span');
+ const expBtnOpen = document.createElement('span');
+ const expBtnClose = document.createElement('span');
 
 //structure
 article.appendChild(articleTitle);
@@ -127,22 +128,37 @@ article.appendChild(articleDate);
 article.appendChild(content1);
 article.appendChild(content2);
 article.appendChild(content3);
-article.appendChild(expBtn);
+article.appendChild(expBtnOpen);
+article.appendChild(expBtnClose)
 // console.log(article);
 
 //set class names
 article.classList.add('article');
 articleDate.classList.add('date');
-expBtn.classList.add('expandButton');
+expBtnOpen.classList.add('article-open');
+expBtnClose.classList.add('expandButton')
 // console.log(article);
+
+
+//set text content
 
 articleTitle.textContent = title
 articleDate.textContent = date
 content1.textContent = firstParagraph
 content2.textContent = secondParagraph
 content3.textContent = thirdParagraph
+// expBtnOpen.textContent = 'Close';
+expBtnClose.textContent = 'Expand/Collapse';
+ 
 
 console.log(article);
+
+expBtnClose.addEventListener('click', () => {
+   article.classList.toggle('article-open');
+  
+
+})
+
 return article;
 //set text content
 }//end function
