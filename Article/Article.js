@@ -104,8 +104,14 @@ const data = [
 // data.forEach(data => {
 //   .appendChild(news(data.title, data.date, data.firstParagraph, data.secondParagraph,data.thirdParagraph))
 // });
+const articles = document.querySelector('.articles');
 
-
+data.forEach(newArt => {
+  articles.appendChild(createdArticle(newArt.title, newArt.date, newArt.firstParagraph, newArt.secondParagraph, newArt.thirdParagraph))
+})
+ 
+//console.log(articles);
+function createdArticle(title, date, firstParagraph, secondParagraph, thirdParagraph){
  //create elements
  const article = document.createElement('div'); 
  const articleTitle = document.createElement('h2');
@@ -116,20 +122,30 @@ const data = [
  const expBtn = document.createElement('span');
 
 //structure
-article.append(articleTitle);
-article.append(articleDate);
-article.append(content1);
-article.append(content2);
-article.append(content3);
-article.append(expBtn);
+article.appendChild(articleTitle);
+article.appendChild(articleDate);
+article.appendChild(content1);
+article.appendChild(content2);
+article.appendChild(content3);
+article.appendChild(expBtn);
 // console.log(article);
 
 //set class names
 article.classList.add('article');
 articleDate.classList.add('date');
 expBtn.classList.add('expandButton');
-console.log(article);
+// console.log(article);
 
+articleTitle.textContent = title
+articleDate.textContent = date
+content1.textContent = firstParagraph
+content2.textContent = secondParagraph
+content3.textContent = thirdParagraph
+
+console.log(article);
+return article;
+//set text content
+}//end function
 // articleTitle.textContent = title;
 
 
