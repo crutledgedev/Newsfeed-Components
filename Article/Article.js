@@ -89,7 +89,7 @@ const data = [
 
   {
     title: '"Wednesdays are made to break you!" -Whistleblower reports',
-    date: 'Jan 1st, 2019',
+    date: 'Oct 31st, 2019',
     firstParagraph: `omg omg omg omg omg omg omg omg omg omg omg omg omg omg omg omg omg omg`,
 
     secondParagraph: `bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq bbq   `,
